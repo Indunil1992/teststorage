@@ -33,8 +33,13 @@
         },
         "triggers": [
           {
-            "resourceName": "http-trigger",
-            "config": {}
+            "resourceName": "scheduler-trigger",
+            "config": {
+              "type": "",
+              "schedulePattern": "23 12 * * *",
+              "jobId": "test",
+              "timezone": "Asia/Colombo"
+            }
           }
         ],
         "testCases": {
@@ -101,6 +106,11 @@
         "name": "http-trigger",
         "type": "http-trigger",
         "config": {}
+      },
+      "scheduler-trigger": {
+        "name": "scheduler-trigger",
+        "type": "scheduler-trigger",
+        "config": {}
       }
     },
     "customTemplate": {
@@ -127,7 +137,7 @@
     "projectRegion": "us-east1",
     "platform": "GCP",
     "platformRegions": {},
-    "lastSave": 1568702735406
+    "lastSave": 1568703031933
   },
   "VCS_STATE": {
     "provider": "GitHub",
